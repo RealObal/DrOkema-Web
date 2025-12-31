@@ -1,0 +1,2 @@
+- [x] Update About.tsx: Add Formal Education section after existing content, then add Certifications sections.
+- [x] Update Training.tsx: Repurpose as Gallery page with grid of images from public folder.
