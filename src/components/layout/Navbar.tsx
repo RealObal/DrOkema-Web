@@ -31,7 +31,7 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/Nelly logo.png"
+              src="/favicon.png"
               alt="Dr. Okema Logo"
               className="h-10 w-auto md:h-14 object-contain"
             />

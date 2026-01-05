@@ -6,6 +6,7 @@
 - [x] Configure vite.config.ts for prerendering
 - [x] Add unique meta tags to each page component
 - [x] Build and test prerendered site
+- [x] Replace logo in navbar and footer with favicon.png
 - [ ] Submit sitemap to Google Search Console
 
 ## Progress
