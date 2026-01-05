@@ -1,9 +1,24 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function About() {
   return (
-    <div className="section-academic bg-gradient-to-b from-slate-50 via-white to-blue-50">
+    <>
+      <Helmet>
+        <title>About Dr. Okema James Nelson | Physician–Scientist Background</title>
+        <meta name="description" content="Learn about Dr. Okema James Nelson's journey as a physician-scientist, from clinical officer to medical doctor, specializing in emergency medicine and cardiovascular health in Uganda." />
+        <meta name="keywords" content="Dr. Okema James Nelson background, physician scientist biography, Uganda doctor education, clinical researcher experience, emergency medicine training" />
+        <link rel="canonical" href="https://drokema.com/about" />
+        <meta property="og:title" content="About Dr. Okema James Nelson | Physician–Scientist" />
+        <meta property="og:description" content="Learn about Dr. Okema's journey from clinical officer to medical doctor, specializing in emergency medicine and cardiovascular health in Uganda." />
+        <meta property="og:url" content="https://drokema.com/about" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Dr. Okema James Nelson | Physician–Scientist" />
+        <meta name="twitter:description" content="Learn about Dr. Okema's journey from clinical officer to medical doctor, specializing in emergency medicine and cardiovascular health in Uganda." />
+      </Helmet>
+      <div className="section-academic bg-gradient-to-b from-slate-50 via-white to-blue-50">
       <div
         className="container-academic relative overflow-hidden"
       >
@@ -275,5 +290,6 @@ export default function About() {
         </div>
       </div>
     </div>
+    </>
   );
 }

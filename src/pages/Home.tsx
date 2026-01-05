@@ -1,11 +1,25 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Download, Mail, Stethoscope, BookOpen, FlaskConical } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { StatCard } from "@/components/ui/StatCard";
 import { Counter } from "@/components/ui/Counter";
 
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Dr. Okema James Nelson, MD | Physician–Scientist | Uganda</title>
+        <meta name="description" content="Medical Doctor and Clinical Researcher specializing in Emergency Medicine and Cardiovascular Health in Uganda. Dedicated to improving health outcomes in resource-limited settings." />
+        <meta name="keywords" content="Dr. Okema James Nelson, physician scientist, Uganda doctor, clinical researcher, emergency medicine, cardiovascular health, Gulu" />
+        <link rel="canonical" href="https://drokema.com/" />
+        <meta property="og:title" content="Dr. Okema James Nelson, MD | Physician–Scientist" />
+        <meta property="og:description" content="Medical Doctor and Clinical Researcher specializing in Emergency Medicine and Cardiovascular Health in Uganda." />
+        <meta property="og:url" content="https://drokema.com/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dr. Okema James Nelson, MD | Physician–Scientist" />
+        <meta name="twitter:description" content="Medical Doctor and Clinical Researcher specializing in Emergency Medicine and Cardiovascular Health in Uganda." />
+      </Helmet>
       {/* Hero Section */}
       <section className="section-academic bg-hero-gradient border-b border-border">
         <div className="container-academic">
