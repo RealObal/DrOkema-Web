@@ -12,7 +12,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <img
-              src="/Nelly logo.png"
+              src="/favicon.png"
               alt="Dr. Okema Logo"
               className="h-20 w-auto mb-4 object-contain"
             />
