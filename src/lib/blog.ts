@@ -12,7 +12,7 @@ export const posts: Post[] = [
     slug: "suspected-type-a-aortic-dissection",
     title:
       "Suspected Type A Aortic Dissection Mimicking Hypertensive Emergency: Bedside Echocardiographic Diagnosis in Resource-Limited Africa: a case report",
-    date: "2026-02-15",
+    date: "2026-01-05",
     author: "James Nelson Okema",
     excerpt:
       "A case report describing bedside transthoracic echocardiography recognition of suspected Stanford type A aortic dissection in a resource-limited African setting.",
@@ -96,7 +96,7 @@ export const posts: Post[] = [
   {
     slug: "cardiac-tamponade-hypothyroidism-uganda",
     title: "When Slow Heartbeat Signals a Hidden Crisis: Cardiac Tamponade Masquerading as TB in Severe Hypothyroidism",
-    date: "2026-02-16",
+    date: "2026-01-12",
     author: "James Nelson Okema",
     excerpt: "Severe hypothyroidism can cause large pericardial effusion and tamponade that mimics TB; prompt drainage and cautious levothyroxine lead to recovery.",
     content: `
@@ -178,7 +178,7 @@ export const posts: Post[] = [
   {
     slug: "when-hypertensive-heart-disease-isnt-the-whole-story-ap-hcm",
     title: "When “Hypertensive Heart Disease” Isn’t the Whole Story: A Missed Apical HCM Diagnosis (and the ECG Clue That Can Save Time)",
-    date: "2026-02-16",
+    date: "2026-01-19",
     author: "James Nelson Okema",
     excerpt: "Apical hypertrophic cardiomyopathy (ApHCM) can be missed when long-standing hypertension biases diagnosis; the ECG clue of deep T-wave inversions without LVH voltage should prompt targeted echo.",
     content: `
