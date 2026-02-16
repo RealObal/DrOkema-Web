@@ -87,6 +87,8 @@ export function usePostSeo(post: any) {
     const ogDesc = setMetaTag('og:description', 'property', post.excerpt || '', true);
     const ogUrl = setMetaTag('og:url', 'property', `https://drokema.com/blog/${post.slug}`, true);
     const ogType = setMetaTag('og:type', 'property', 'article', true);
+    const ogImage = setMetaTag('og:image', 'property', `https://drokema.com${post.previewImage || '/images/preview.jpg'}`, true);
+    const twitterCard = setMetaTag('twitter:card', 'name', 'summary_large_image');
 
     const jsonLd = addJsonLd(post);
 
@@ -97,6 +99,8 @@ export function usePostSeo(post: any) {
       ogDesc.remove();
       ogUrl.remove();
       ogType.remove();
+      ogImage.remove();
+      twitterCard.remove();
       jsonLd.remove();
     };
   }, [post]);

@@ -4,6 +4,7 @@ export interface Post {
   date: string;
   excerpt: string;
   author?: string;
+  previewImage?: string;
   content: string; // HTML string for simplicity
 }
 
@@ -16,6 +17,7 @@ export const posts: Post[] = [
     author: "James Nelson Okema",
     excerpt:
       "A case report describing bedside transthoracic echocardiography recognition of suspected Stanford type A aortic dissection in a resource-limited African setting.",
+    previewImage: "/Blog1/ECHO1.jpg",
     content: `
       <h2>When a “Hypertensive Emergency” Is Actually a Fatal Aortic Dissection</h2>
 
@@ -99,6 +101,7 @@ export const posts: Post[] = [
     date: "2026-01-12",
     author: "James Nelson Okema",
     excerpt: "Severe hypothyroidism can cause large pericardial effusion and tamponade that mimics TB; prompt drainage and cautious levothyroxine lead to recovery.",
+    previewImage: "/bog%203/CXR.jpg",
     content: `
       <h2>When Slow Heartbeat Signals a Hidden Crisis: Cardiac Tamponade Masquerading as TB in Severe Hypothyroidism</h2>
 
@@ -181,6 +184,7 @@ export const posts: Post[] = [
     date: "2026-01-19",
     author: "James Nelson Okema",
     excerpt: "Apical hypertrophic cardiomyopathy (ApHCM) can be missed when long-standing hypertension biases diagnosis; the ECG clue of deep T-wave inversions without LVH voltage should prompt targeted echo.",
+    previewImage: "/bog2/SPEC.jpg",
     content: `
       <h2>When “Hypertensive Heart Disease” Isn’t the Whole Story: A Missed Apical HCM Diagnosis (and the ECG Clue That Can Save Time)</h2>
 
