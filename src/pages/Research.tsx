@@ -57,12 +57,12 @@ export default function Research() {
         {activeTab === "published" && (
           <div className="max-w-4xl w-full animate-fade-in">
             <PublicationCard
-              title="Prevalence, types, and determinants of intimate-partner violence among pregnant women in Northern Uganda: a hospital-based cross-sectional study"
-              authors="Jerom Okot, Cinderella Anena, Nelson James Okema, et al."
-              journal="BMC Public Health"
-              year="2025"
+              title="Caregivers Acceptability and Uptake of Voluntary Medical Circumsicion among Male Children Under 5 Years Old in Gulu City, Northern Uganda"
+              authors="Donald Otika, James Nelson Okema, Morrish Okello-Obol, Pebalo Francis Pebolo, Felix Bongomin, Ronald Olum, Harriet Ajilong, Peter Akera, Jimmyy Opee, Jackline Ayikoru"
+              journal="Scientific Reports"
+              year="2026"
               status="published"
-              doi="10.1186/s12889-025-24465-7"
+              doi="10.1038/s41598-026-37693-7"
             />
 
             <PublicationCard
@@ -72,6 +72,15 @@ export default function Research() {
               year="2025"
               status="published"
               doi="10.1136/bmjopen-2024-096709"
+            />
+
+            <PublicationCard
+              title="Prevalence, types, and determinants of intimate-partner violence among pregnant women in Northern Uganda: a hospital-based cross-sectional study"
+              authors="Jerom Okot, Cinderella Anena, Nelson James Okema, et al."
+              journal="BMC Public Health"
+              year="2025"
+              status="published"
+              doi="10.1186/s12889-025-24465-7"
             />
 
           </div>
@@ -87,12 +96,7 @@ export default function Research() {
               status="under-review"
             />
 
-            <PublicationCard
-              title="Caregivers Acceptability and Uptake of Voluntary Medical Circumsision among Male Children Under 5 Years Old in Gulu City, Northern Uganda"
-              authors="Donald Otika,James Nelson Okema, Morrish Okello-Obol, Pebalo Francis Pebolo, Felix Bongomin, Ronald Olum,Harriet Ajilong, Peter Akera, Jimmyy Opee,Jackline Ayikoru"
-              year="2025"
-              status="under-review"
-            />
+            
 
             <PublicationCard
               title="Inpatient Heart Failure: Clinical Characteristics and Mortality predictor in Northern Uganda"

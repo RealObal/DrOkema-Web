@@ -23,6 +23,11 @@ export default function Gallery() {
     "team.jpeg",
     "Vcat For cover.jpeg",
     "Vcat moderation.jpeg",
+    "con1.jpeg",
+    "con2.jpeg",
+    "con3.jpeg",
+    "con4.jpeg",
+    "con5.jpeg",
   ];
 
   return (

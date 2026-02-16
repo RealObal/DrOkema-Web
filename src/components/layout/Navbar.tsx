@@ -8,7 +8,7 @@ const navigation = [
   { name: "Clinical", href: "/clinical" },
   { name: "Research", href: "/research" },
   { name: "Projects", href: "/projects" },
-  { name: "Teaching", href: "/teaching" },
+  { name: "Blog", href: "/blog" },
   { name: "Gallery", href: "/gallery" },
   { name: "CV", href: "/cv" },
   { name: "Contact", href: "/contact" },
