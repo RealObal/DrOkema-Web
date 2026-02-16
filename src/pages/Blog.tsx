@@ -12,7 +12,10 @@ export default function Blog() {
         />
 
         <div className="mt-8 grid gap-6">
-          {posts.map((post) => (
+          {posts
+            .slice()
+            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+            .map((post) => (
             <article key={post.slug} className="p-6 rounded-lg bg-white shadow-sm">
               <h3 className="text-2xl font-serif font-semibold mb-2">
                 <Link to={`/blog/${post.slug}`} className="text-sky-700 hover:underline">
