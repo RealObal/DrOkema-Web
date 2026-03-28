@@ -1,0 +1,1 @@
+export { MedicalBlogPost } from './MedicalBlogPost';
