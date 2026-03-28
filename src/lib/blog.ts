@@ -5,6 +5,7 @@ export interface Post {
   excerpt: string;
   author?: string;
   previewImage?: string;
+  tags?: string[];
   content: string; // HTML string for simplicity
 }
 
@@ -236,4 +237,13 @@ export const posts: Post[] = [
 
 export function getPostBySlug(slug: string) {
   return posts.find((p) => p.slug === slug) || null;
+}
+
+export function getAllPosts() {
+  return posts;
+}
+
+export function getAllTags() {
+  const allTags = posts.flatMap((p) => p.tags || []);
+  return Array.from(new Set(allTags));
 }
