@@ -5,7 +5,7 @@ import { Award, BookOpen, Users, GraduationCap } from "lucide-react";
 
 export default function Teaching() {
   return (
-    <div className="py-16 md:py-24 bg-slate-50">
+    <div className="py-16 md:py-24 bg-accent-gradient">
       <div className="container-academic">
         <SectionHeader
           title="Teaching & Mentorship"

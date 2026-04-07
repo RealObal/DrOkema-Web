@@ -22,7 +22,7 @@ export default function About() {
         .about-page {
           font-family: 'Poppins', 'Segoe UI', sans-serif;
           color: #1a1a1a;
-          background: #fff;
+          background: linear-gradient(135deg, hsl(189 100% 37.8%) 0%, hsl(209 40% 96%) 100%);
         }
 
         .about-section-label {

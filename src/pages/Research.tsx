@@ -15,7 +15,7 @@ export default function Research() {
   ];
 
   return (
-    <div className="section-academic bg-section-gradient">
+    <div className="section-academic bg-accent-gradient">
       <div className="container-academic">
         <SectionHeader
           title="Research"

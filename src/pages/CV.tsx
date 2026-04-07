@@ -74,7 +74,7 @@ export default function CV() {
   ];
 
   return (
-    <div className="section-academic bg-hero-gradient">
+    <div className="section-academic bg-accent-gradient">
       <div className="container-academic">
         <SectionHeader
           title="CV & Downloads"

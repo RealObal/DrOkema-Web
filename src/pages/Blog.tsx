@@ -4,7 +4,7 @@ import { posts } from "@/lib/blog";
 
 export default function Blog() {
   return (
-    <div className="py-16 md:py-24 bg-slate-50">
+    <div className="py-16 md:py-24 bg-accent-gradient">
       <div className="container-academic">
         <SectionHeader
           title="Blog"

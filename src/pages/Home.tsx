@@ -8,7 +8,7 @@ const S = {
   page: {
     fontFamily: "'Poppins', 'Segoe UI', sans-serif",
     color: "#0f172a",
-    background: "#ffffff",
+    background: "linear-gradient(135deg, hsl(189 100% 37.8%) 0%, hsl(209 40% 96%) 100%)",
   },
   wrap: { maxWidth: 860, margin: "0 auto", padding: "0 1.5rem" },
 

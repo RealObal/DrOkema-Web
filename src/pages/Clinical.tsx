@@ -4,7 +4,7 @@ import { Stethoscope, Heart, AlertTriangle, Users, Activity, Globe, GraduationCa
 
 export default function Clinical() {
   return (
-    <div className="section-academic bg-hero-gradient">
+    <div className="section-academic bg-accent-gradient">
       <div className="container-academic">
         <SectionHeader
           title="Clinical Practice"

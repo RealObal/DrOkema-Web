@@ -31,7 +31,7 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="section-academic bg-gradient-to-b from-slate-50 via-white to-blue-50">
+    <div className="section-academic bg-accent-gradient">
       <div className="container-academic">
         <SectionHeader
           title="Gallery"
