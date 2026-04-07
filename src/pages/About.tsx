@@ -5,16 +5,16 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About Dr. Okema James Nelson | Physician–Scientist Background</title>
+        <title>About Dr. Okema James Nelson | Physician-Scientist Background</title>
         <meta name="description" content="Learn about Dr. Okema James Nelson's journey as a physician-scientist, from clinical officer to medical doctor, specializing in emergency medicine and cardiovascular health in Uganda." />
         <meta name="keywords" content="Dr. Okema James Nelson background, physician scientist biography, Uganda doctor education, clinical researcher experience, emergency medicine training" />
         <link rel="canonical" href="https://drokema.com/about" />
-        <meta property="og:title" content="About Dr. Okema James Nelson | Physician–Scientist" />
+        <meta property="og:title" content="About Dr. Okema James Nelson | Physician-Scientist" />
         <meta property="og:description" content="Learn about Dr. Okema's journey from clinical officer to medical doctor, specializing in emergency medicine and cardiovascular health in Uganda." />
         <meta property="og:url" content="https://drokema.com/about" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Dr. Okema James Nelson | Physician–Scientist" />
+        <meta name="twitter:title" content="About Dr. Okema James Nelson | Physician-Scientist" />
         <meta name="twitter:description" content="Learn about Dr. Okema's journey from clinical officer to medical doctor, specializing in emergency medicine and cardiovascular health in Uganda." />
       </Helmet>
 
@@ -223,7 +223,7 @@ export default function About() {
               <strong>Dr. Okema James Nelson</strong> is a Ugandan physician and clinical researcher
               with special interest in emergency medicine and emergency cardiology. Born and raised
               in post-conflict Northern Uganda, he witnessed firsthand the devastating impact of
-              inadequate healthcare infrastructure on communities—an experience that shaped his
+              inadequate healthcare infrastructure on communities - an experience that shaped his
               commitment to medicine and his focus on emergency care, a critical gap in the region's
               health services.
             </p>
@@ -239,7 +239,7 @@ export default function About() {
               From Clinical Officer to Medical Doctor, Dr. Okema's career trajectory reflects a
               deliberate path toward addressing systemic healthcare challenges. His clinical
               experience spans emergency departments, internal medicine wards, and community health
-              programs—each role deepening his understanding of how research can inform better
+              programs - each role deepening his understanding of how research can inform better
               clinical outcomes for underserved populations in Northern Uganda.
             </p>
 
@@ -259,11 +259,11 @@ export default function About() {
               My work is driven by a simple conviction: the gap between what we know and what
               communities in Northern Uganda receive must be closed. Every clinical question I ask,
               every dataset I analyze, every paper I write is a step toward making quality emergency
-              and cardiovascular care not a privilege—but a universal standard. I believe that
+              and cardiovascular care not a privilege - but a universal standard. I believe that
               physician-scientists rooted in the communities they serve are the most powerful force
               for sustainable health systems change.
             </p>
-            <cite>— Dr. Okema James Nelson</cite>
+            <cite> -  Dr. Okema James Nelson</cite>
           </blockquote>
 
           <p className="about-body-text">
@@ -288,7 +288,7 @@ export default function About() {
               <div className="edu-content">
                 <h3>Gulu University Faculty of Medicine</h3>
                 <div className="edu-degree">Bachelor of Medicine and Bachelor of Surgery (MBChB)</div>
-                <div className="edu-dates">2018 – 2023</div>
+                <div className="edu-dates">2020 - 2025</div>
                 <a href="https://www.gu.ac.ug/" target="_blank" rel="noopener noreferrer">www.gu.ac.ug</a>
               </div>
             </li>
@@ -299,10 +299,10 @@ export default function About() {
                 <div className="edu-line"></div>
               </div>
               <div className="edu-content">
-                <h3>Gulu University</h3>
+                <h3>Gulu Institutes of Health Sciences</h3>
                 <div className="edu-degree">Diploma in Clinical Medicine and Community Health</div>
-                <div className="edu-dates">2014 – 2017</div>
-                <a href="https://www.gu.ac.ug/" target="_blank" rel="noopener noreferrer">www.gu.ac.ug</a>
+                <div className="edu-dates">2017 - 2019</div>
+                <a href="https://gihst.ac.ug/" target="_blank" rel="noopener noreferrer">gihst.ac.ug</a>
               </div>
             </li>
 
@@ -326,7 +326,7 @@ export default function About() {
           <p className="believe-text">
             I believe that medicine practiced without curiosity becomes routine, and routine
             becomes indifference. Every patient who walks through an emergency department door in
-            Northern Uganda carries a story shaped by geography, history, and inequity—and it is our
+            Northern Uganda carries a story shaped by geography, history, and inequity - and it is our
             duty as clinicians and researchers to understand those stories deeply enough to change
             them.
           </p>
@@ -334,19 +334,19 @@ export default function About() {
           <p className="believe-text">
             I believe that the most powerful evidence is evidence generated by the communities it
             is meant to serve. Research done <em>on</em> people is a transaction. Research done
-            <em> with</em> people is a partnership—and partnerships produce solutions that last.
+            <em> with</em> people is a partnership - and partnerships produce solutions that last.
           </p>
 
           <p className="believe-text">
             I believe that emergency medicine is not just a specialty; it is a test of a health
-            system's integrity. How a system responds in a crisis—who gets care, how fast, with what
-            resources—reveals everything about its values. My life's work is to ensure that test
+            system's integrity. How a system responds in a crisis - who gets care, how fast, with what
+            resources - reveals everything about its values. My life's work is to ensure that test
             yields a better answer for Uganda.
           </p>
 
           <p className="believe-text">
             And I believe that the physician-scientist who was born in a conflict zone, who watched
-            neighbors die of preventable causes, who chose this path because of what they witnessed—
+            neighbors die of preventable causes, who chose this path because of what they witnessed - 
             is exactly who should be at the table where evidence meets policy. Not despite that
             background, but because of it.
           </p>
