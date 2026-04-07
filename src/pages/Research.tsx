@@ -153,7 +153,7 @@ export default function Research() {
                   integration of mental health services into routine maternal care.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-medium">Timeline:</span> 2022–2025 | 
+                  <span className="font-medium">Timeline:</span> 2022-2025 | 
                   <span className="font-medium ml-2">Sample:</span> 800 mother-infant pairs
                 </p>
               </div>
@@ -170,7 +170,7 @@ export default function Research() {
                   To assess the prevalence and risk factors for post cesarean delivery among post operative mothers at Gulu University Teaching Hospitals.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-medium">Timeline:</span> 2023–2026 | 
+                  <span className="font-medium">Timeline:</span> 2023-2026 | 
                   <span className="font-medium ml-2">Sites:</span> 4 health facilities
                 </p>
               </div>

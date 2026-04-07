@@ -13,7 +13,6 @@ import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Gallery from "./pages/Gallery";
-import CV from "./pages/CV";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import WhatsAppFloat from "./components/ui/WhatsAppFloat";
@@ -39,7 +38,6 @@ const App = () => (
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/gallery" element={<Gallery />} />
-              <Route path="/cv" element={<CV />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

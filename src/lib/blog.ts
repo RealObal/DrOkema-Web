@@ -24,7 +24,7 @@ export const posts: Post[] = [
 
       <p class="lead">A case from frontline African emergency care.</p>
 
-        <h2>“Is this more than hypertension?” — The Case</h2>
+        <h2>“Is this more than hypertension?”  -  The Case</h2>
       <p>A 58-year-old man from rural Northern Uganda arrived with agonizing tearing central chest pain radiating to the interscapular region, diaphoresis, and dyspnea. He had a 10‑year history of poorly controlled hypertension.</p>
 
       <h2>Immediate worrying findings</h2>
@@ -37,7 +37,7 @@ export const posts: Post[] = [
         <h2>Electrocardiogram</h2>
       <ul>
         <li>Sinus rhythm, HR 96 bpm</li>
-        <li>Mild nonspecific ST‑segment depressions (0.5–1.0 mm) in II, III, aVF, V4–V6</li>
+        <li>Mild nonspecific ST‑segment depressions (0.5-1.0 mm) in II, III, aVF, V4-V6</li>
         <li>Serial high‑sensitivity troponin I negative at baseline and 12 hours (&lt;0.04 ng/mL)</li>
       </ul>
       <div class="text-center my-4">
@@ -67,16 +67,16 @@ export const posts: Post[] = [
       </div>
 
         <h2>Advanced imaging (speckle‑tracking)</h2>
-      <p>Preserved global longitudinal strain (−28%) with mild diastolic dysfunction — supports chronic hypertensive substrate rather than acute ischemia.</p>
+      <p>Preserved global longitudinal strain (−28%) with mild diastolic dysfunction  -  supports chronic hypertensive substrate rather than acute ischemia.</p>
       <div class="flex flex-col md:flex-row gap-4 items-center justify-center my-4">
         <img src="/Blog1/SPEC2.png" alt="Speckle 1" class="w-full md:w-1/2 mx-auto" />
         <img src="/Blog1/Spec1.jpg" alt="Speckle 2" class="w-full md:w-1/2 mx-auto" />
       </div>
 
-        <h2>Management — stabilize the aorta, not just the number</h2>
+        <h2>Management  -  stabilize the aorta, not just the number</h2>
       <ul>
-        <li>Heart rate control first: IV beta‑blockade to target HR ≈ 55–60 bpm</li>
-        <li>Then controlled BP reduction: IV nicardipine titrated to SBP 120–130 mmHg</li>
+        <li>Heart rate control first: IV beta‑blockade to target HR ≈ 55-60 bpm</li>
+        <li>Then controlled BP reduction: IV nicardipine titrated to SBP 120-130 mmHg</li>
         <li>Adequate analgesia to limit sympathetic drive</li>
         <li>Continuous cardiac monitoring and serial BP checks</li>
         <li>Urgent cardiothoracic surgical referral and transfer once stabilized</li>
@@ -192,21 +192,21 @@ export const posts: Post[] = [
       <p class="lead">A long history of hypertension can make clinicians (and patients) assume every cardiac symptom is “just the pressure.” This case shows how that assumption anchoring bias delayed recognition of apical hypertrophic cardiomyopathy (ApHCM) in a 60-year-old African man, until a classic ECG pattern prompted a deeper look with focused echocardiography.</p>
 
       <h2>Why this case matters</h2>
-      <p>ApHCM is a less common subtype of hypertrophic cardiomyopathy, reported as roughly 5–10% of HCM cases worldwide, and it’s probably under-recognized in many African settings. In resource-limited environments where cardiac MRI may not be readily available, careful echocardiography (plus a sharp read of the ECG) can still make the diagnosis with high confidence.</p>
+      <p>ApHCM is a less common subtype of hypertrophic cardiomyopathy, reported as roughly 5-10% of HCM cases worldwide, and it’s probably under-recognized in many African settings. In resource-limited environments where cardiac MRI may not be readily available, careful echocardiography (plus a sharp read of the ECG) can still make the diagnosis with high confidence.</p>
 
       <h2>The patient story (briefly)</h2>
       <p>A 60-year-old man with about 15 years of hypertension presented with one week of exertional dyspnea, fatigue, and intermittent palpitations without chest pain, syncope, orthopnea, or paroxysmal nocturnal dyspnea. He had previously been labelled with hypertensive heart disease, but prior echo measurements/images were unavailable, and the old label shaped ongoing treatment decisions.</p>
 
-      <p>His medications at presentation included amlodipine, bisoprolol, losartan, telmisartan–hydrochlorothiazide, and clopidogrel though the reason for clopidogrel was undocumented and there was no history of coronary or cerebrovascular disease.</p>
+      <p>His medications at presentation included amlodipine, bisoprolol, losartan, telmisartan-hydrochlorothiazide, and clopidogrel though the reason for clopidogrel was undocumented and there was no history of coronary or cerebrovascular disease.</p>
 
       <h2>The diagnostic clue: deep T-wave inversions without LVH voltage</h2>
-      <p>The ECG showed sinus rhythm with normal intervals, <em>without</em> Sokolow–Lyon or Cornell voltage criteria for LVH but with deep symmetric “giant” T-wave inversions (about 7–9 mm) in anterolateral leads (V1–V4, I, aVL). That combination—T-wave inversion without voltage-defined LVH—is a recognized clue that should trigger targeted evaluation for ApHCM, even when a patient has longstanding hypertension.</p>
+      <p>The ECG showed sinus rhythm with normal intervals, <em>without</em> Sokolow-Lyon or Cornell voltage criteria for LVH but with deep symmetric “giant” T-wave inversions (about 7-9 mm) in anterolateral leads (V1-V4, I, aVL). That combination - T-wave inversion without voltage-defined LVH - is a recognized clue that should trigger targeted evaluation for ApHCM, even when a patient has longstanding hypertension.</p>
       <div class="text-center my-4">
         <img src="/bog2/ECG.jpg" alt="ECG" class="mx-auto w-full max-w-lg" />
       </div>
 
       <h2>Echo + strain: diagnosing ApHCM without MRI</h2>
-      <p>Transthoracic echocardiography revealed apical predominant hypertrophy with maximal apical thickness 18 mm and posterior wall 11 mm, giving an apical-to-posterior wall thickness ratio of 1.6. There was classic systolic apical cavity obliteration with an “ace-of-spades” configuration, preserved ejection fraction (55–60%), and no LV outflow tract obstruction at rest or with Valsalva.</p>
+      <p>Transthoracic echocardiography revealed apical predominant hypertrophy with maximal apical thickness 18 mm and posterior wall 11 mm, giving an apical-to-posterior wall thickness ratio of 1.6. There was classic systolic apical cavity obliteration with an “ace-of-spades” configuration, preserved ejection fraction (55-60%), and no LV outflow tract obstruction at rest or with Valsalva.</p>
       <div class="flex flex-col md:flex-row gap-4 items-center justify-center my-4">
         <img src="/bog2/ECHO%201.jpg" alt="Echocardiography apical view" class="w-full md:w-1/2 mx-auto" />
         <img src="/bog2/ECHO2.jpg" alt="Echocardiography" class="w-full md:w-1/2 mx-auto" />
@@ -218,7 +218,7 @@ export const posts: Post[] = [
       </div>
 
       <h2>Fixing the problem: treatment rationalization and outcome</h2>
-      <p>The clinical turning point wasn’t an exotic intervention—it was getting the diagnosis right and aligning medications accordingly. Dual renin–angiotensin system blockade was rationalized (telmisartan–HCT stopped while losartan was retained with renal monitoring), clopidogrel was discontinued due to lack of indication, and bisoprolol was optimized as first-line therapy for symptomatic non-obstructive ApHCM.</p>
+      <p>The clinical turning point wasn’t an exotic intervention - it was getting the diagnosis right and aligning medications accordingly. Dual renin-angiotensin system blockade was rationalized (telmisartan-HCT stopped while losartan was retained with renal monitoring), clopidogrel was discontinued due to lack of indication, and bisoprolol was optimized as first-line therapy for symptomatic non-obstructive ApHCM.</p>
 
       <p>At two-week follow-up, the patient reported complete resolution of exertional dyspnea and palpitations, with blood pressure controlled (about 132/84 mmHg) and no adverse drug effects reported. Cardiac MRI was recommended for more comprehensive sudden cardiac death risk stratification, but this remained pending.</p>
 

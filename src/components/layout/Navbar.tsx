@@ -10,7 +10,6 @@ const navigation = [
   { name: "Projects", href: "/projects" },
   { name: "Blog", href: "/blog" },
   { name: "Gallery", href: "/gallery" },
-  { name: "CV", href: "/cv" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -24,8 +23,8 @@ export function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/50 backdrop-blur-sm">
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00A3C1] to-transparent" />
       <nav className="container-academic">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -38,14 +37,17 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors ${
-                  isActive(item.href)
-                    ? "text-black" : "text-sky-500 hover:text-sky-900"
+                className={`transition-all text-sm font-medium ${
+                  item.name === "Contact"
+                    ? "rounded-full border border-[#00A3C1] bg-[#ffffff] px-4 py-2 text-[#1B2B48] shadow-sm hover:bg-[#00A3C1] hover:text-white"
+                    : isActive(item.href)
+                    ? "text-[#1B2B48]"
+                    : "text-[#0E7490] hover:text-[#00A3C1]"
                 }`}
               >
                 {item.name}
@@ -56,7 +58,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-sky-900"
+            className="lg:hidden p-2 text-[#1B2B48]"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -65,16 +67,19 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-sky-500 bg-white animate-fade-in">
-            <div className="flex flex-col space-y-4">
+          <div className="lg:hidden py-4 border-t border-[#F1F5F9] bg-white animate-fade-in">
+            <div className="flex flex-col space-y-3">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium transition-colors ${
-                    isActive(item.href)
-                      ? "text-black" : "text-sky-500 hover:text-sky-900"
+                  className={`text-base font-medium transition-all ${
+                    item.name === "Contact"
+                      ? "inline-flex items-center justify-center rounded-full border border-[#00A3C1] bg-[#FFFFFF] px-4 py-2 text-[#1B2B48] hover:bg-[#00A3C1] hover:text-white"
+                      : isActive(item.href)
+                      ? "text-[#1B2B48]"
+                      : "text-[#0E7490] hover:text-[#00A3C1]"
                   }`}
                 >
                   {item.name}

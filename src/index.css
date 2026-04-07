@@ -6,60 +6,60 @@
 
 @layer base {
   :root {
-    --background: 197 70% 96%; /* soft sky blue */
-    --bg-hero: 197 70% 96%;
-    --gradient-hero: linear-gradient(135deg, hsl(197 70% 96%) 0%, hsl(185 60% 92%) 100%);
+    --background: 0 0% 100%; /* Pure White background */
+    --bg-hero: 0 0% 100%;
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(209 40% 96%) 100%);
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 25% 15%;
+    --card: 209 40% 96%; /* Soft Slate Gray secondary cards */
+    --card-foreground: 217 16% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 25% 15%;
+    --popover-foreground: 217 16% 12%;
 
     /* Navy Blue - Professional & Trustworthy */
-    --primary: 210 60% 25%;
+    --primary: 218 45.5% 19.4%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 15% 96%;
-    --secondary-foreground: 210 25% 15%;
+    --secondary: 209 40% 96%;
+    --secondary-foreground: 217 16% 12%;
 
-    --muted: 210 12% 95%;
-    --muted-foreground: 210 10% 40%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 217 16% 28%;
 
-    /* Teal - Medical & Healing */
-    --accent: 174 60% 35%;
+    /* Medical Cyan accent */
+    --accent: 189 100% 37.8%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 358 75% 52%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 15% 90%;
-    --input: 210 15% 90%;
-    --ring: 210 60% 25%;
+    --border: 209 40% 90%;
+    --input: 209 40% 96%;
+    --ring: 218 45.5% 19.4%;
 
     --radius: 0.5rem;
 
     /* Medical Professional Tokens */
-    --medical-navy: 210 60% 25%;
-    --medical-navy-light: 210 45% 40%;
-    --medical-teal: 174 60% 35%;
-    --medical-teal-light: 174 40% 92%;
+    --medical-navy: 218 45.5% 19.4%;
+    --medical-navy-light: 218 45.5% 34.0%;
+    --medical-teal: 189 100% 37.8%;
+    --medical-teal-light: 189 100% 90.0%;
     --medical-gold: 42 85% 55%;
     --medical-gold-light: 42 60% 92%;
 
     /* Professional Background Colors */
-    --bg-hero: 197 70% 96%;
-    --bg-section-alt: 210 20% 98%;
-    --bg-section-accent: 210 30% 96%;
-    --bg-highlight: 174 25% 96%;
+    --bg-hero: 0 0% 100%;
+    --bg-section-alt: 209 40% 96%;
+    --bg-section-accent: 210 24% 98%;
+    --bg-highlight: 189 100% 90%;
     --bg-warm: 42 30% 97%;
     
     /* Gradient Backgrounds */
-    --gradient-hero: linear-gradient(135deg, hsl(197 70% 96%) 0%, hsl(185 60% 92%) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(174 25% 96%) 0%, hsl(210 20% 98%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(42 30% 97%) 0%, hsl(210 20% 98%) 100%);
-    --gradient-navy: linear-gradient(135deg, hsl(210 60% 25%) 0%, hsl(210 50% 20%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(209 40% 96%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(209 40% 96%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(189 100% 37.8%) 0%, hsl(209 40% 96%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(42 30% 97%) 0%, hsl(209 40% 96%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(218 45.5% 19.4%) 0%, hsl(218 45.5% 14.0%) 100%);
 
     /* Typography */
     --font-serif: 'Crimson Text', Georgia, serif;
@@ -69,14 +69,14 @@
     --section-padding: 6rem;
     --container-max: 1200px;
 
-    --sidebar-background: 210 15% 98%;
-    --sidebar-foreground: 210 25% 20%;
-    --sidebar-primary: 210 60% 25%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 210 12% 95%;
-    --sidebar-accent-foreground: 210 25% 15%;
-    --sidebar-border: 210 15% 90%;
-    --sidebar-ring: 210 60% 25%;
+    --sidebar-background: 209 40% 96%;
+    --sidebar-foreground: 217 16% 12%;
+    --sidebar-primary: 218 45.5% 19.4%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 189 100% 37.8%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 209 40% 90%;
+    --sidebar-ring: 218 45.5% 19.4%;
   }
 
   .dark {

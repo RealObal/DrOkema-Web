@@ -9,8 +9,8 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
-  title = "Dr. Okema James Nelson, MD | Physician–Scientist | Uganda",
-  description = "Dr. Okema James Nelson, MD — Ugandan Physician-Scientist and Clinical Researcher. Specializing in Cardiology, Emergency Medicine, and Acute Care in resource-limited settings.",
+  title = "Dr. Okema James Nelson, MD | Physician-Scientist | Uganda",
+  description = "Dr. Okema James Nelson, MD  -  Ugandan Physician-Scientist and Clinical Researcher. Specializing in Cardiology, Emergency Medicine, and Acute Care in resource-limited settings.",
   image = "https://drokema.com/path-to-default-og-image.jpg", // Replace with actual image
   url = "https://drokema.com",
   type = "website"

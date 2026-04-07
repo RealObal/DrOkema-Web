@@ -5,8 +5,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-blue-900 text-white relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+    <footer className="bg-[#1B2B48] text-white relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00A3C1] to-transparent" />
       <div className="container-academic py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand */}
@@ -19,7 +19,7 @@ export function Footer() {
             <h3 className="text-lg font-serif font-semibold text-white mb-4">
               Dr. Okema James Nelson
             </h3>
-            <p className="text-sm text-sky-100 leading-relaxed">
+            <p className="text-sm text-[#F1F5F9] leading-relaxed">
               Medical Doctor, Clinical Researcher, and advocate for improved emergency
               and cardiovascular care in resource-limited settings.
             </p>
@@ -31,13 +31,10 @@ export function Footer() {
               Quick Links
             </h4>
             <nav className="flex flex-col space-y-2">
-              <Link to="/research" className="text-sm text-sky-100 hover:text-white transition-colors">
+              <Link to="/research" className="text-sm text-[#F1F5F9] hover:text-[#00A3C1] transition-colors">
                 Research
               </Link>
-              <Link to="/cv" className="text-sm text-sky-100 hover:text-white transition-colors">
-                Download CV
-              </Link>
-              <Link to="/contact" className="text-sm text-sky-100 hover:text-white transition-colors">
+              <Link to="/contact" className="text-sm text-[#F1F5F9] hover:text-[#00A3C1] transition-colors">
                 Contact
               </Link>
             </nav>
@@ -51,7 +48,7 @@ export function Footer() {
             <div className="flex flex-col space-y-3">
               <a
                 href="mailto:ojamesnelson@gmail.com"
-                className="flex items-center space-x-2 text-sm text-sky-100 hover:text-white transition-colors"
+                className="flex items-center space-x-2 text-sm text-[#F1F5F9] hover:text-white transition-colors"
               >
                 <Mail size={16} />
                 <span>ojamesnelson@gmail.com</span>
@@ -60,12 +57,12 @@ export function Footer() {
                 href="https://www.linkedin.com/in/dr-okema"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-sm text-sky-100 hover:text-white transition-colors"
+                className="flex items-center space-x-2 text-sm text-[#F1F5F9] hover:text-white transition-colors"
               >
                 <Linkedin size={16} />
                 <span>LinkedIn Profile</span>
               </a>
-              <div className="flex items-center space-x-2 text-sm text-sky-100">
+              <div className="flex items-center space-x-2 text-sm text-[#F1F5F9]">
                    <MapPin size={16} />
                 <span>Kampala, Uganda</span>
               </div>
@@ -73,9 +70,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent my-8" />
+        <div className="h-px bg-gradient-to-r from-transparent via-[#00A3C1] to-transparent my-8" />
 
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-sky-100">
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[#F1F5F9]">
           <p>© {currentYear} RealObal inc Made for Dr.Okema. All rights reserved.</p>
           <p className="mt-2 md:mt-0">
             <a href="https://drokema.com" className="hover:text-white transition-colors">
