@@ -1,302 +1,258 @@
 import { Link } from "react-router-dom";
+import { ArrowRight, Mail, MapPin, MessageSquare } from "lucide-react";
 import { SEOHead } from "@/components/SEO/SEOHead";
 import { JsonLdSchema } from "@/components/SEO/JsonLdSchema";
-import { Counter } from "@/components/ui/Counter";
 
-/* ─── Inline styles (Poppins, clean white, matches drolum.com) ────────────── */
-const S = {
-  page: {
-    fontFamily: "'Poppins', 'Segoe UI', sans-serif",
-    color: "#0f172a",
-    background: "linear-gradient(135deg, hsl(189 100% 37.8%) 0%, hsl(209 40% 96%) 100%)",
-  },
-  wrap: { maxWidth: 860, margin: "0 auto", padding: "0 1.5rem" },
-
-  /* Hero */
-  heroWrap: { padding: "4rem 1.5rem 3rem", maxWidth: 860, margin: "0 auto" },
-  heroName: { fontSize: "2.2rem", fontWeight: 800, color: "#1B2B48", marginBottom: "0.6rem", lineHeight: 1.2 },
-  heroQuote: { fontSize: "1.1rem", fontStyle: "italic", color: "#334155", marginBottom: "0.25rem" },
-  heroAuthor: { fontSize: "1rem", fontWeight: 700, color: "#00A3C1", marginBottom: 0 },
-
-  divider: { border: "none", borderTop: "1px solid #F1F5F9", margin: "3rem 0" },
-
-  /* Section heading */
-  sectionH2: { fontSize: "1.55rem", fontWeight: 800, color: "#1B2B48", marginBottom: "1.25rem" },
-
-  /* About blurb */
-  bodyText: { fontSize: "1rem", lineHeight: 1.9, color: "#1f2937", marginBottom: "1rem" },
-  moreLink: { display: "inline-block", marginTop: "0.5rem", color: "#00A3C1", fontWeight: 600, textDecoration: "none", fontSize: "0.97rem" },
-
-  /* Research Interests */
-  interestGrid: { display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "0.5rem" },
-  interestTag: {
-    padding: "0.45rem 1.1rem",
-    border: "1px solid #00A3C1",
-    borderRadius: 999,
-    color: "#00A3C1",
-    fontWeight: 600,
-    fontSize: "0.9rem",
-    background: "transparent",
-  },
-
-  /* Scholarly counters */
-  counterGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem", margin: "1.5rem 0" },
-  counterBox: { textAlign: "center" },
-  counterNum: { fontSize: "2.8rem", fontWeight: 800, color: "#1B2B48", lineHeight: 1 },
-  counterLabel: { fontSize: "0.85rem", color: "#475569", marginTop: "0.3rem", fontWeight: 500 },
-  scMoreLink: { display: "inline-block", color: "#00A3C1", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" },
-
-  /* Books */
-  bookItem: { display: "flex", gap: "1.25rem", marginBottom: "2rem", alignItems: "flex-start" },
-  bookImg: { width: 72, flexShrink: 0, borderRadius: 4, boxShadow: "0 2px 8px rgba(0,0,0,0.08)" },
-  bookText: { fontSize: "0.97rem", lineHeight: 1.75, color: "#1f2937" },
-  bookLink: { color: "#00A3C1", textDecoration: "none", fontSize: "0.88rem" },
-
-  /* Awards */
-  awardItem: { marginBottom: "1.75rem", paddingBottom: "1.75rem", borderBottom: "1px solid #F1F5F9" },
-  awardTitle: { fontSize: "1.05rem", fontWeight: 700, color: "#1B2B48", marginBottom: "0.2rem" },
-  awardYear: { fontSize: "0.88rem", color: "#475569", fontWeight: 500 },
-
-  /* Blog */
-  blogGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "2rem", marginTop: "1.25rem" },
-  blogCard: { borderBottom: "2px solid #F1F5F9", paddingBottom: "1.5rem" },
-  blogImg: { width: "100%", height: 200, objectFit: "cover", borderRadius: 8, marginBottom: "1rem", display: "block", background: "#F1F5F9" },
-  blogImgPlaceholder: { width: "100%", height: 200, borderRadius: 8, marginBottom: "1rem", background: "#F1F5F9", display: "flex", alignItems: "center", justifyContent: "center", color: "#0E7490", fontSize: "2.5rem" },
-  blogTitle: { fontSize: "1.05rem", fontWeight: 700, color: "#1B2B48", marginBottom: "0.4rem", lineHeight: 1.45, textDecoration: "none" },
-  blogMeta: { fontSize: "0.82rem", color: "#475569", marginBottom: "0.6rem" },
-  blogMetaDot: { margin: "0 0.35rem", color: "#d1d5db" },
-  blogCategory: { color: "#00A3C1", textDecoration: "none" },
-  blogExcerpt: { fontSize: "0.94rem", color: "#475569", lineHeight: 1.75, marginBottom: "0.75rem" },
-  blogReadMore: { color: "#00A3C1", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" },
-};
-
-/* ─── Static blog posts (replace with real data / API fetch as needed) ───── */
-const BLOG_POSTS = [
+const expertise = [
   {
-    id: 1,
-    slug: "/blog/emergency-care-northern-uganda",
-    title: "Strengthening Emergency Care in Post-Conflict Northern Uganda: Lessons from the Field.",
-    author: "Dr. Okema James Nelson",
-    date: "March 10, 2025",
-    category: "Clinical Practice",
-    categorySlug: "/blog",
-    excerpt:
-      "Working in the emergency department at St. Mary's Hospital Lacor, I have seen how quickly the gap between what we know and what we can deliver becomes a matter of life or death...",
-    image: null,
+    title: "Emergency Medicine",
+    body:
+      "Dr. Okema's clinical work is grounded in emergency care for resource-limited settings, with experience across acute assessment, resuscitation, trauma care, internal medicine, and ICU support.",
   },
   {
-    id: 2,
-    slug: "/blog/cardiovascular-disease-uganda",
-    title: "The Rising Burden of Cardiovascular Disease in Uganda: What the Data Are Telling Us.",
-    author: "Dr. Okema James Nelson",
-    date: "January 22, 2025",
-    category: "Research",
-    categorySlug: "/blog",
-    excerpt:
-      "For decades, infectious diseases dominated Uganda's health narrative. But a quieter epidemic has been building  -  one that now accounts for a growing share of preventable deaths in hospitals...",
-    image: null,
+    title: "Cardiovascular Disease",
+    body:
+      "His research interests include cardiovascular disease epidemiology, emergency cardiology, and practical systems that improve early recognition and care for high-risk patients.",
+  },
+  {
+    title: "Maternal Health",
+    body:
+      "He studies maternal health outcomes with attention to the clinical realities of frontline facilities, referral pathways, and preventable complications in sub-Saharan Africa.",
+  },
+  {
+    title: "Health Systems Strengthening",
+    body:
+      "Through training, program coordination, and implementation work, he focuses on translating evidence into usable protocols, team capacity, and durable care improvements.",
   },
 ];
 
-/* ─── Component ────────────────────────────────────────────────────────────── */
+const credentials = [
+  "Medical Officer at St. Mary's Hospital Lacor, Gulu, Uganda",
+  "Project Manager and Lead Trainer, Life + Limb Primary Trauma Care Foundation Northern Uganda Chapter",
+  "Program Coordinator at MIMHA",
+  "Clinical researcher focused on emergency medicine, cardiovascular disease, maternal health, and implementation science",
+  "Trained in Medicine and Surgery at Gulu University Faculty of Medicine",
+];
+
+const contactLinks = [
+  {
+    label: "Email",
+    value: "ojamesnelson@gmail.com",
+    href: "mailto:ojamesnelson@gmail.com",
+    icon: Mail,
+  },
+  {
+    label: "WhatsApp",
+    value: "+256 776 994 589",
+    href: "https://wa.me/256776994589?text=Hello%20Dr%20Okema%2C%20I%20would%20like%20to%20get%20in%20touch.",
+    icon: MessageSquare,
+  },
+];
+
+function Rule() {
+  return <div className="my-9 h-px w-full bg-slate-200" aria-hidden="true" />;
+}
+
 export default function Home() {
   return (
     <>
-      <SEOHead />
+      <SEOHead
+        title="Dr. Okema James Nelson, MBChB | Medical Doctor & Clinical Researcher"
+        description="Academic portfolio of Dr. Okema James Nelson, a Ugandan medical doctor and clinical researcher focused on emergency medicine, cardiovascular disease, maternal health, and health systems strengthening."
+        image="https://drokema.com/Dr%20Okemas%20Profile%20photo.png"
+        url="https://drokema.com/"
+      />
       <JsonLdSchema type="person" />
 
-      <div style={S.page}>
+      <div className="bg-white text-slate-900">
+        <section className="container-academic flex min-h-[72vh] flex-col justify-center py-16 sm:py-20">
+          <div className="max-w-5xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-medical-teal">
+              Medical doctor and clinical researcher
+            </p>
+            <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-normal text-medical-navy sm:text-6xl lg:text-7xl">
+              Dr. Okema James Nelson
+            </h1>
+            <Rule />
+            <p className="max-w-3xl font-serif text-3xl leading-tight text-slate-700 sm:text-4xl">
+              Strengthening emergency, cardiovascular, and maternal care through
+              clinical practice, research, and frontline training.
+            </p>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <Link
+                to="/contact"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-medical-navy px-6 py-3 text-sm font-semibold text-white transition hover:bg-medical-navy-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-medical-teal focus-visible:ring-offset-2"
+              >
+                Start a Conversation
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+              <Link
+                to="/research"
+                className="inline-flex min-h-12 items-center justify-center rounded-md border border-slate-300 px-6 py-3 text-sm font-semibold text-medical-navy transition hover:border-medical-teal hover:text-medical-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-medical-teal focus-visible:ring-offset-2"
+              >
+                View Publications
+              </Link>
+            </div>
+          </div>
+        </section>
 
-        {/* ── HERO: Name + Quote ──────────────────────────────────────────── */}
-        <div style={S.heroWrap}>
-          <h1 style={S.heroName}>Dr. Okema James Nelson, MBChB.</h1>
-          <p style={S.heroQuote}>
-            "Research is to see what everybody else has seen, and to think what nobody else has thought."
-          </p>
-          <p style={S.heroAuthor}> -  Albert Szent-Györgyi</p>
-        </div>
+        <section className="container-academic max-w-5xl pb-16">
+          <Rule />
+          <div className="grid gap-8 lg:grid-cols-[0.38fr_0.62fr] lg:items-start">
+            <h2 className="text-3xl font-semibold text-medical-navy">
+              What is it like to work with Dr. Okema?
+            </h2>
+            <div className="space-y-5 text-base leading-8 text-slate-700 sm:text-lg">
+              <p>
+                Dr. Okema brings together bedside medicine, research discipline, and
+                systems thinking. His work begins with the realities of patients and
+                clinical teams, then asks what evidence, training, and coordination can
+                make care safer and more reliable.
+              </p>
+              <p>
+                He is especially interested in practical, context-aware solutions for
+                emergency departments, cardiovascular care, maternal health, and
+                resource-limited health systems across Northern Uganda and the wider
+                region.
+              </p>
+            </div>
+          </div>
 
-        <div style={S.wrap}>
-
-          <hr style={S.divider} />
-
-          {/* ── ABOUT BLURB ─────────────────────────────────────────────────── */}
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
-            <div className="w-full lg:w-[40%]">
+          <Rule />
+          <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
+            <div>
               <img
-                src="/About me .jpeg"
+                src="/Dr Okemas Profile photo.png"
                 alt="Dr. Okema James Nelson"
-                className="w-full rounded-3xl shadow-lg object-cover"
+                className="aspect-[4/5] w-full max-w-sm rounded-md border border-slate-200 object-cover shadow-sm"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
-
-            <div className="w-full lg:w-[60%]">
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#1B2B48]">
-                About Dr. Okema James Nelson
+            <div>
+              <h2 className="text-3xl font-semibold text-medical-navy">
+                Dr. Okema James Nelson, MBChB
               </h2>
-              <div className="mt-6 mb-8 h-1 w-28 rounded-full bg-[#00A3C1]" />
-
-              <p className="text-base md:text-lg leading-8 text-[#1f2937] mb-6">
-                <strong>Dr. Okema James Nelson</strong> is a Ugandan physician and clinical researcher
-                with special interest in emergency medicine and emergency cardiology. He trained in
-                Medicine and Surgery (MBChB) at Gulu University Faculty of Medicine, where he developed
-                deep expertise in clinical care for resource-limited settings in post-conflict Northern
-                Uganda.
+              <p className="mt-2 text-lg font-semibold text-medical-teal">
+                Medical Doctor | Clinical Researcher
               </p>
-              <p className="text-base md:text-lg leading-8 text-[#1f2937] mb-6">
-                Dr. Okema has served as a Medical Officer at St. Mary's Hospital Lacor, Gulu, spanning
-                the emergency department, internal medicine wards, and the Intensive Care Unit. He is
-                also Project Manager and Lead Trainer for the Life + Limb Primary Trauma Care
-                Foundation Northern Uganda Chapter, and Program Coordinator at MIMHA, where he leads
-                integrated mental health and substance use recovery programming.
+              <ul className="mt-7 space-y-3 text-base leading-7 text-slate-700">
+                {credentials.map((credential) => (
+                  <li key={credential} className="flex gap-3">
+                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-medical-teal" />
+                    <span>{credential}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/about"
+                className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-medical-teal hover:text-medical-navy"
+              >
+                More About Dr. Okema
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+
+          <Rule />
+          <div className="grid gap-8 lg:grid-cols-[0.38fr_0.62fr] lg:items-start">
+            <h2 className="text-3xl font-semibold text-medical-navy">How to Start?</h2>
+            <div className="space-y-6 text-base leading-8 text-slate-700 sm:text-lg">
+              <p>
+                Simple: send a short note with the topic, timeline, and best way to
+                reach you. Professional inquiries, collaborations, speaking invitations,
+                training requests, and academic correspondence can all begin through the
+                contact page.
               </p>
-              <p className="text-base md:text-lg leading-8 text-[#1f2937] mb-6 text-justify">
-                His research centers on cardiovascular disease epidemiology, maternal health outcomes,
-                and emergency care systems strengthening across sub-Saharan Africa. In Northern Uganda
-                he examines acute cardiovascular risk patterns, identifies drivers of maternal morbidity,
-                and evaluates emergency referral pathways to improve how care is delivered in fragile
-                health systems. By combining clinical data, field-based observation, and community
-                engagement, he works to translate rigorous evidence into practical, patient-centered
-                solutions that strengthen frontline emergency and maternal care for Northern Uganda and
-                the wider region.
-              </p>
-
-              <Link to="/about" style={S.moreLink}>More Details →</Link>
-            </div>
-          </div>
-
-          <hr style={S.divider} />
-
-          {/* ── RESEARCH INTERESTS ──────────────────────────────────────────── */}
-          <h2 style={S.sectionH2}>Research Interests</h2>
-          <div style={S.interestGrid}>
-            {["Emergency Medicine", "Cardiovascular Disease", "Maternal Health", "Clinical Epidemiology", "Health Systems Strengthening", "Implementation Science"].map(tag => (
-              <span key={tag} style={S.interestTag}>{tag}</span>
-            ))}
-          </div>
-
-          <hr style={S.divider} />
-
-          {/* ── SCHOLARLY CONTRIBUTIONS ─────────────────────────────────────── */}
-          <h2 style={S.sectionH2}>Scholarly Contributions</h2>
-          <p style={S.bodyText}>
-            Dr. Okema has contributed to peer-reviewed publications, clinical guidelines, and
-            conference presentations. His work focuses on generating actionable evidence for
-            emergency and cardiovascular care in resource-limited settings.
-          </p>
-
-          <div style={S.counterGrid}>
-            <div style={S.counterBox}>
-              <div style={S.counterNum}><Counter end={5} suffix="+" /></div>
-              <div style={S.counterLabel}>Publications</div>
-            </div>
-            <div style={S.counterBox}>
-              <div style={S.counterNum}><Counter end={8} suffix="+" /></div>
-              <div style={S.counterLabel}>Presentations</div>
-            </div>
-            <div style={S.counterBox}>
-              <div style={S.counterNum}><Counter end={3} /></div>
-              <div style={S.counterLabel}>Ongoing Studies</div>
-            </div>
-          </div>
-
-          <Link to="/research" style={S.scMoreLink}>More Scholarly Contributions →</Link>
-
-          <hr style={S.divider} />
-
-          {/* ── BOOKS & GUIDELINES ──────────────────────────────────────────── */}
-          <h2 style={S.sectionH2}>Clinical Guidelines &amp; Reports</h2>
-
-          <div style={S.bookItem}>
-            <div style={{ ...S.bookImgPlaceholder, width: 72, height: 96, fontSize: "1.5rem", flexShrink: 0 }}>📄</div>
-            <div style={S.bookText}>
-              <strong>Life + Limb Primary Trauma Care Foundation, 2024.</strong>{" "}
-              <em>Primary Trauma Care Training Manual  -  Northern Uganda Adaptation.</em> Gulu, Uganda.
-              <br />
-              <Link to="/research" style={S.bookLink}>Learn more →</Link>
-            </div>
-          </div>
-
-          <div style={S.bookItem}>
-            <div style={{ ...S.bookImgPlaceholder, width: 72, height: 96, fontSize: "1.5rem", flexShrink: 0 }}>📄</div>
-            <div style={S.bookText}>
-              <strong>MIMHA Program, 2023.</strong>{" "}
-              <em>Integrated Mental Health and Substance Use Recovery  -  Community Care Protocols.</em> Gulu, Uganda.
-              <br />
-              <Link to="/research" style={S.bookLink}>Learn more →</Link>
-            </div>
-          </div>
-
-          <hr style={S.divider} />
-
-          {/* ── HONORS & AWARDS ─────────────────────────────────────────────── */}
-          <h2 style={S.sectionH2}>Honors and Awards</h2>
-
-          {[
-            {
-              title: "Project Manager & Lead Trainer  -  Life + Limb Primary Trauma Care Foundation Northern Uganda Chapter.",
-              year: "2023 - Present",
-            },
-            {
-              title: "Medical Officer of Excellence  -  St. Mary's Hospital Lacor Emergency Department, Gulu, Uganda.",
-              year: "2023",
-            },
-            {
-              title: "Best Research Presentation  -  Gulu University Faculty of Medicine Annual Research Symposium.",
-              year: "2022",
-            },
-          ].map((a, i) => (
-            <div key={i} style={S.awardItem}>
-              <div style={S.awardTitle}>{a.title}</div>
-              <div style={S.awardYear}>{a.year}</div>
-            </div>
-          ))}
-
-          <Link to="/about" style={S.scMoreLink}>More Awards &amp; Honours →</Link>
-
-          <hr style={S.divider} />
-
-          {/* ── RECENT BLOG ─────────────────────────────────────────────────── */}
-          <h2 style={S.sectionH2}>Read Recent Blog</h2>
-
-          <div style={S.blogGrid}>
-            {BLOG_POSTS.map(post => (
-              <div key={post.id} style={S.blogCard}>
-                {/* Thumbnail */}
-                <Link to={post.slug}>
-                  {post.image
-                    ? <img src={post.image} alt={post.title} style={S.blogImg} loading="lazy" />
-                    : <div style={S.blogImgPlaceholder}>🏥</div>
-                  }
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Link
+                  to="/contact"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-medical-teal px-6 py-3 text-sm font-semibold text-white transition hover:bg-medical-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-medical-teal focus-visible:ring-offset-2"
+                >
+                  Contact Dr. Okema
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
-
-                {/* Title */}
-                <Link to={post.slug} style={S.blogTitle}>
-                  <h3 style={{ ...S.blogTitle, margin: "0 0 0.4rem" }}>{post.title}</h3>
-                </Link>
-
-                {/* Meta: By · Date · Category */}
-                <div style={S.blogMeta}>
-                  By <strong>{post.author}</strong>
-                  <span style={S.blogMetaDot}>·</span>
-                  {post.date}
-                  <span style={S.blogMetaDot}>·</span>
-                  <Link to={post.categorySlug} style={S.blogCategory}>{post.category}</Link>
-                </div>
-
-                {/* Excerpt */}
-                <p style={S.blogExcerpt}>{post.excerpt}</p>
-
-                {/* Read More */}
-                <Link to={post.slug} style={S.blogReadMore}>Read More →</Link>
               </div>
-            ))}
+              <div className="grid gap-4 pt-2 sm:grid-cols-2">
+                {contactLinks.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      className="group flex items-start gap-3 rounded-md border border-slate-200 p-4 transition hover:border-medical-teal"
+                      target={item.href.startsWith("http") ? "_blank" : undefined}
+                      rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    >
+                      <Icon className="mt-1 h-5 w-5 text-medical-teal" aria-hidden="true" />
+                      <span>
+                        <span className="block text-sm font-semibold text-slate-900">
+                          {item.label}
+                        </span>
+                        <span className="block break-all text-sm text-slate-600 group-hover:text-medical-teal">
+                          {item.value}
+                        </span>
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
           </div>
 
-          {/* bottom spacing */}
-          <div style={{ height: "4rem" }} />
+          <Rule />
+          <div>
+            <h2 className="text-4xl font-semibold text-medical-navy">Expertise</h2>
+            <div className="mt-9 divide-y divide-slate-200">
+              {expertise.map((item) => (
+                <article
+                  key={item.title}
+                  className="grid gap-4 py-8 lg:grid-cols-[0.32fr_0.68fr]"
+                >
+                  <h3 className="text-2xl font-semibold text-slate-900">{item.title}</h3>
+                  <p className="text-base leading-8 text-slate-700 sm:text-lg">{item.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
 
-        </div>
+          <Rule />
+          <div className="grid gap-8 lg:grid-cols-[0.38fr_0.62fr] lg:items-start">
+            <h2 className="text-3xl font-semibold text-medical-navy">The Rest</h2>
+            <div className="space-y-5 text-base leading-8 text-slate-700 sm:text-lg">
+              <p>
+                Explore current research, clinical projects, outreach work, and recent
+                writing from Dr. Okema's academic portfolio.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  to="/clinical"
+                  className="inline-flex min-h-11 items-center rounded-md border border-slate-300 px-5 py-2 text-sm font-semibold text-medical-navy transition hover:border-medical-teal hover:text-medical-teal"
+                >
+                  Clinical Work
+                </Link>
+                <Link
+                  to="/projects"
+                  className="inline-flex min-h-11 items-center rounded-md border border-slate-300 px-5 py-2 text-sm font-semibold text-medical-navy transition hover:border-medical-teal hover:text-medical-teal"
+                >
+                  Projects
+                </Link>
+                <Link
+                  to="/blog"
+                  className="inline-flex min-h-11 items-center rounded-md border border-slate-300 px-5 py-2 text-sm font-semibold text-medical-navy transition hover:border-medical-teal hover:text-medical-teal"
+                >
+                  Blog
+                </Link>
+              </div>
+              <p className="flex items-center gap-2 text-sm font-semibold text-slate-500">
+                <MapPin className="h-4 w-4 text-medical-teal" aria-hidden="true" />
+                Gulu, Northern Uganda
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

@@ -6,6 +6,7 @@ export interface Post {
   author?: string;
   previewImage?: string;
   tags?: string[];
+  readTime?: number;
   content: string; // HTML string for simplicity
 }
 

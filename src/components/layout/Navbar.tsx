@@ -6,7 +6,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Clinical", href: "/clinical" },
-  { name: "Research", href: "/research" },
+  { name: "Publications", href: "/research" },
   { name: "Projects", href: "/projects" },
   { name: "Blog", href: "/blog" },
   { name: "Gallery", href: "/gallery" },
@@ -18,69 +18,67 @@ export function Navbar() {
   const location = useLocation();
 
   const isActive = (href: string) => {
-    if (href === "/") return location.pathname === "/";
-    return location.pathname.startsWith(href);
+    const path = href.split("?")[0];
+    if (path === "/") return location.pathname === "/";
+    return location.pathname.startsWith(path);
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/95 shadow-sm backdrop-blur-md">
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00A3C1] to-transparent" />
-      <nav className="container-academic">
+      <nav className="container-academic" aria-label="Primary navigation">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A3C1] focus-visible:ring-offset-2">
             <img
               src="/favicon.png"
               alt="Dr. Okema Logo"
               className="h-10 w-auto md:h-14 object-contain"
+              decoding="async"
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center gap-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`transition-all text-sm font-medium ${
-                  item.name === "Contact"
-                    ? "rounded-full border border-[#00A3C1] bg-[#ffffff] px-4 py-2 text-[#1B2B48] shadow-sm hover:bg-[#00A3C1] hover:text-white"
-                    : isActive(item.href)
-                    ? "text-[#1B2B48]"
+                className={`rounded-md px-3 py-2 text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A3C1] focus-visible:ring-offset-2 ${
+                  isActive(item.href)
+                    ? "bg-slate-100 text-[#1B2B48]"
                     : "text-[#0E7490] hover:text-[#00A3C1]"
                 }`}
+                aria-current={isActive(item.href) ? "page" : undefined}
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-[#1B2B48]"
-            aria-label="Toggle menu"
+            className="lg:hidden rounded-md p-2 text-[#1B2B48] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A3C1] focus-visible:ring-offset-2"
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-[#F1F5F9] bg-white animate-fade-in">
+          <div id="mobile-navigation" className="lg:hidden py-4 border-t border-[#F1F5F9] bg-white animate-fade-in">
             <div className="flex flex-col space-y-3">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium transition-all ${
-                    item.name === "Contact"
-                      ? "inline-flex items-center justify-center rounded-full border border-[#00A3C1] bg-[#FFFFFF] px-4 py-2 text-[#1B2B48] hover:bg-[#00A3C1] hover:text-white"
-                      : isActive(item.href)
-                      ? "text-[#1B2B48]"
+                  className={`rounded-md px-3 py-3 text-base font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A3C1] focus-visible:ring-offset-2 ${
+                    isActive(item.href)
+                      ? "bg-slate-100 text-[#1B2B48]"
                       : "text-[#0E7490] hover:text-[#00A3C1]"
                   }`}
+                  aria-current={isActive(item.href) ? "page" : undefined}
                 >
                   {item.name}
                 </Link>

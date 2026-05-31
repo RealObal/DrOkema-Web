@@ -73,7 +73,7 @@ export function Footer() {
         <div className="h-px bg-gradient-to-r from-transparent via-[#00A3C1] to-transparent my-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[#F1F5F9]">
-          <p>© {currentYear} RealObal inc Made for Dr.Okema. All rights reserved.</p>
+          <p>&copy; {currentYear} Dr. Okema James Nelson. All rights reserved.</p>
           <p className="mt-2 md:mt-0">
             <a href="https://drokema.com" className="hover:text-white transition-colors">
               drokema.com

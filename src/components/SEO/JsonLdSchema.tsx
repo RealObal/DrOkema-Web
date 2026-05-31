@@ -10,13 +10,12 @@ export function JsonLdSchema({ type }: JsonLdSchemaProps) {
     "@type": "Person",
     "name": "Dr. Okema James Nelson",
     "url": "https://drokema.com",
-    "image": "https://drokema.com/path-to-your-profile-image.jpg", // Replace with actual image URL
+    "image": "https://drokema.com/Dr%20Okemas%20Profile%20photo.png",
     "sameAs": [
-      "https://linkedin.com/in/your-profile", // Replace with actual LinkedIn
-      "https://orcid.org/your-orcid-id", // Replace with actual ORCID
-      "https://scholar.google.com/citations?user=your-user-id" // Replace with actual Google Scholar
+      "https://www.linkedin.com/in/dr-okema",
+      "https://x.com/DrJNELLY95"
     ],
-    "jobTitle": "Physician-Scientist and Clinical Researcher",
+    "jobTitle": "Medical Doctor and Clinical Researcher",
     "worksFor": {
       "@type": "MedicalOrganization",
       "name": "St. Mary's Hospital Lacor",
@@ -42,9 +41,9 @@ export function JsonLdSchema({ type }: JsonLdSchemaProps) {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalOrganization",
-    "name": "Dr. Okema James Nelson Medical Practice",
+    "name": "Dr. Okema James Nelson",
     "url": "https://drokema.com",
-    "logo": "https://drokema.com/path-to-logo.jpg", // Replace with actual logo URL
+    "logo": "https://drokema.com/favicon.png",
     "medicalSpecialty": ["Cardiology", "Emergency Medicine"],
     "address": {
       "@type": "PostalAddress",
