@@ -101,6 +101,69 @@ const publications = {
   ],
 };
 
+const additionalPublications = [
+  {
+    title:
+      "Apical Hypertrophic Cardiomyopathy Misdiagnosed as Hypertensive Heart Disease Due to Anchoring Bias in an African Man: A Case Report",
+    authors:
+      "Okema JN, Chukwuocha C, Danvictor E, Uche CN, Ekengwu CC, Egharevba JE, Ebunoluwa EO, Bongomin F",
+    journal: "International Medical Case Reports Journal",
+    year: "2026",
+    doi: "10.2147/IMCRJ.S605653",
+    label: "Case report",
+  },
+  {
+    title:
+      "Cardiac Tamponade Secondary to Massive Pericardial Effusion in Severe Primary Hypothyroidism: A Case Report",
+    authors:
+      "Okema JN, Oriba DL, Okot J, Obal R, Pitua I, Odong C, Otika D, Bongomin F, Olum R",
+    journal: "International Medical Case Reports Journal",
+    year: "2026",
+    doi: "10.2147/IMCRJ.S610746",
+    label: "Case report",
+  },
+  {
+    title:
+      "Prevalence and Sex-Specific Distribution of Electrocardiographic Variants in Normotensive Nigerian University Students: A Cross-Sectional Study",
+    authors:
+      "Egharevba JE, Okema JN, Nwanaga CU, Onyebuagu PC, Acomo G, Pitua I, Bongomin F",
+    journal: "International Journal of General Medicine",
+    year: "2026",
+    doi: "10.2147/IJGM.S616783",
+    label: "Original research",
+  },
+  {
+    title:
+      "Kounis Syndrome Presenting with Atrial Fibrillation and Shark-Fin ST Elevation After Multiple Bee Stings in an African Patient: A Case Report",
+    authors:
+      "Okema JN, Uche CN, Okello MO, Acomo G, Pitua I, Odong C",
+    journal: "International Medical Case Reports Journal",
+    year: "2026",
+    doi: "10.2147/IMCRJ.S605660",
+    label: "Case report",
+  },
+  {
+    title:
+      "Delayed Diagnosis of Twin-Twin Transfusion Syndrome in Humanitarian, Resource-Limited Settings: A Case Report",
+    authors:
+      "Okot J, Ochola H, Aeku MJ, Okema NJ, Bongomin F, Ouma S, Pebolo FP",
+    journal: "Cases",
+    year: "2026",
+    doi: "10.35702/cases.10027",
+    label: "Case report",
+  },
+  {
+    title:
+      "QT Interval Prolongation in Patients Receiving Bedaquiline-Based Regimens for Drug-Resistant Tuberculosis in Sub-Saharan Africa: A Systematic Review and Meta-Analysis",
+    authors:
+      "Okello MO, Pitua I, Okema JN, Ekwem D, Bongomin F, Olum R",
+    journal: "Journal of Clinical Tuberculosis and Other Mycobacterial Diseases",
+    year: "2026",
+    doi: "10.1016/j.jctube.2026.100592",
+    label: "Systematic review",
+  },
+];
+
 const interests = [
   "Cardiovascular Epidemiology",
   "Emergency Medicine Systems",
@@ -163,6 +226,48 @@ export default function Research() {
             )}
           </article>
         ))}
+      </section>
+
+      <Rule />
+      <section className="space-y-6">
+        <h2 className="text-3xl font-semibold text-medical-navy">Additional Publications</h2>
+        <p className="max-w-3xl text-sm leading-7 text-slate-600">
+          These DOI links correspond to additional published case reports and research papers featuring Dr. Okema's clinical research collaborations.
+        </p>
+        <ul className="grid gap-4 sm:grid-cols-2">
+          {additionalPublications.map((publication) => (
+            <li key={publication.doi}>
+              <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-medical-teal hover:shadow-md">
+                <div className="flex flex-col gap-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-medical-teal">
+                      {publication.label}
+                    </p>
+                    <h3 className="mt-2 text-lg font-semibold text-slate-900">
+                      {publication.title}
+                    </h3>
+                  </div>
+
+                  <div className="space-y-2 text-sm leading-6 text-slate-600">
+                    <p className="font-medium text-slate-800">{publication.journal}</p>
+                    <p>{publication.authors}</p>
+                    <p className="text-sm text-slate-500">{publication.year}</p>
+                  </div>
+
+                  <a
+                    href={`https://doi.org/${publication.doi}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-medical-teal px-4 py-2 text-sm font-semibold text-white transition hover:bg-medical-navy"
+                  >
+                    View DOI
+                    <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
+              </article>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <Rule />

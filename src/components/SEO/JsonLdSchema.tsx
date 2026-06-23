@@ -7,7 +7,7 @@ interface JsonLdSchemaProps {
 export function JsonLdSchema({ type }: JsonLdSchemaProps) {
   const personSchema = {
     "@context": "https://schema.org",
-    "@type": "Person",
+    "@type": "Physician",
     "name": "Dr. Okema James Nelson",
     "url": "https://drokema.com",
     "image": "https://drokema.com/Dr%20Okemas%20Profile%20photo.png",
@@ -25,7 +25,7 @@ export function JsonLdSchema({ type }: JsonLdSchemaProps) {
         "addressCountry": "UG"
       }
     },
-    "medicalSpecialty": ["Cardiology", "Emergency Medicine"],
+    "medicalSpecialty": ["Emergency Medicine", "Cardiology"],
     "affiliation": [
       {
         "@type": "EducationalOrganization",
@@ -44,7 +44,7 @@ export function JsonLdSchema({ type }: JsonLdSchemaProps) {
     "name": "Dr. Okema James Nelson",
     "url": "https://drokema.com",
     "logo": "https://drokema.com/favicon.png",
-    "medicalSpecialty": ["Cardiology", "Emergency Medicine"],
+    "medicalSpecialty": ["Emergency Medicine", "Cardiology"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Gulu",

@@ -3,21 +3,27 @@ import { MinimalPage, Rule } from "@/components/layout/MinimalPage";
 
 const education = [
   {
+    school: "Gulu Institutes of Health Sciences",
+    degree: "Diploma in Clinical Medicine and Community Health",
+    dates: "2016 - 2019",
+    href: "https://gihst.ac.ug/",
+  },
+  {
     school: "Gulu University Faculty of Medicine",
     degree: "Bachelor of Medicine and Bachelor of Surgery (MBChB)",
     dates: "2020 - 2025",
     href: "https://www.gu.ac.ug/",
   },
   {
-    school: "Gulu Institutes of Health Sciences",
-    degree: "Diploma in Clinical Medicine and Community Health",
-    dates: "2017 - 2019",
-    href: "https://gihst.ac.ug/",
+    school: "FREYA International Schools of Research and Implementation",
+    degree: "Clinical Research and Implementation Training",
+    dates: "2023",
   },
   {
-    school: "Uganda Advanced Certificate of Education",
-    degree: "Biology, Chemistry, and Mathematics",
-    dates: "Completed 2013",
+    school: "Harvard University",
+    degree: "Clinical Research Collaboration",
+    dates: "Jan - Jul 2025",
+    href: "https://www.harvard.edu/",
   },
 ];
 
