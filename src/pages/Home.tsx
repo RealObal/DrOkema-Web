@@ -151,7 +151,16 @@ export default function Home() {
       <JsonLdSchema type="person" />
 
       <main className="bg-white text-slate-900">
-        <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(0,163,193,0.14),_transparent_35%),linear-gradient(180deg,#ffffff_0%,#f6fbff_100%)] py-20 sm:py-28">
+        <section
+          className="relative overflow-hidden py-20 sm:py-28"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)), url('/Vcat For cover.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <div className="container-academic grid gap-12 lg:grid-cols-[0.65fr_0.35fr] lg:items-center">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-medical-teal">
