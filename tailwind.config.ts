@@ -66,10 +66,19 @@ export default {
           gold: "hsl(var(--medical-gold))",
           "gold-light": "hsl(var(--medical-gold-light))",
         },
+        okema: {
+          cream: "hsl(var(--okema-cream))",
+          ink: "hsl(var(--okema-ink))",
+          muted: "hsl(var(--okema-muted))",
+          line: "hsl(var(--okema-line))",
+          gold: "hsl(var(--okema-gold))",
+          rust: "hsl(var(--okema-rust))",
+          olive: "hsl(var(--okema-olive))",
+        },
       },
       fontFamily: {
-        serif: ['Crimson Text', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Georgia', 'Times New Roman', 'serif'],
+        sans: ['Arial', 'Helvetica', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

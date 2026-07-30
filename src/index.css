@@ -4,77 +4,85 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Pure White background */
+    --background: 43 34% 92%;
     --bg-hero: 0 0% 100%;
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(209 40% 96%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 25% 99%) 0%, hsl(204 24% 96%) 100%);
 
-    --card: 209 40% 96%; /* Soft Slate Gray secondary cards */
-    --card-foreground: 217 16% 12%;
+    --card: 204 24% 96%; /* Drolum-inspired soft blue gray */
+    --card-foreground: 210 42% 17%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 217 16% 12%;
 
-    /* Navy Blue - Professional & Trustworthy */
-    --primary: 218 45.5% 19.4%;
+    /* Odrek-inspired warm editorial palette, adapted for medicine */
+    --primary: 165 31% 16%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 209 40% 96%;
-    --secondary-foreground: 217 16% 12%;
+    --secondary: 43 34% 92%;
+    --secondary-foreground: 165 31% 16%;
 
-    --muted: 210 20% 95%;
-    --muted-foreground: 217 16% 28%;
+    --muted: 39 25% 82%;
+    --muted-foreground: 31 11% 34%;
 
-    /* Medical Cyan accent */
-    --accent: 189 100% 37.8%;
-    --accent-foreground: 0 0% 100%;
+    /* Reference blue accent */
+    --accent: 38 54% 57%;
+    --accent-foreground: 165 31% 16%;
 
     --destructive: 358 75% 52%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 209 40% 90%;
-    --input: 209 40% 96%;
-    --ring: 218 45.5% 19.4%;
+    --border: 39 25% 78%;
+    --input: 43 34% 92%;
+    --ring: 38 54% 57%;
 
     --radius: 0.5rem;
 
     /* Medical Professional Tokens */
-    --medical-navy: 218 45.5% 19.4%;
-    --medical-navy-light: 218 45.5% 34.0%;
-    --medical-teal: 189 100% 37.8%;
-    --medical-teal-light: 189 100% 90.0%;
-    --medical-gold: 42 85% 55%;
-    --medical-gold-light: 42 60% 92%;
+    --medical-navy: 165 31% 16%;
+    --medical-navy-light: 31 11% 34%;
+    --medical-teal: 151 21% 36%;
+    --medical-teal-light: 43 34% 92%;
+    --medical-gold: 38 54% 57%;
+    --medical-gold-light: 39 25% 82%;
+
+    --okema-cream: 43 34% 92%;
+    --okema-ink: 165 31% 16%;
+    --okema-muted: 31 11% 34%;
+    --okema-line: 39 25% 78%;
+    --okema-gold: 38 54% 57%;
+    --okema-rust: 19 53% 39%;
+    --okema-olive: 151 21% 36%;
 
     /* Professional Background Colors */
     --bg-hero: 0 0% 100%;
-    --bg-section-alt: 209 40% 96%;
-    --bg-section-accent: 210 24% 98%;
-    --bg-highlight: 189 100% 90%;
-    --bg-warm: 42 30% 97%;
+    --bg-section-alt: 43 34% 92%;
+    --bg-section-accent: 39 25% 82%;
+    --bg-highlight: 38 54% 57%;
+    --bg-warm: 43 34% 92%;
     
     /* Gradient Backgrounds */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(209 40% 96%) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(209 40% 96%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(189 100% 37.8%) 0%, hsl(209 40% 96%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(42 30% 97%) 0%, hsl(209 40% 96%) 100%);
-    --gradient-navy: linear-gradient(135deg, hsl(218 45.5% 19.4%) 0%, hsl(218 45.5% 14.0%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 25% 99%) 0%, hsl(204 24% 96%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(204 24% 96%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(218 96% 57%) 0%, hsl(216 97% 92%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(204 25% 91%) 0%, hsl(204 24% 96%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(210 42% 17%) 0%, hsl(206 100% 15%) 100%);
 
     /* Typography */
     --font-serif: Georgia, 'Times New Roman', serif;
-    --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-sans: Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
 
     /* Spacing rhythm */
     --section-padding: 6rem;
-    --container-max: 1200px;
+    --container-max: 1180px;
 
-    --sidebar-background: 209 40% 96%;
-    --sidebar-foreground: 217 16% 12%;
-    --sidebar-primary: 218 45.5% 19.4%;
+    --sidebar-background: 204 24% 96%;
+    --sidebar-foreground: 210 42% 17%;
+    --sidebar-primary: 210 42% 17%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 189 100% 37.8%;
+    --sidebar-accent: 218 96% 57%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 209 40% 90%;
-    --sidebar-ring: 218 45.5% 19.4%;
+    --sidebar-border: 204 25% 91%;
+    --sidebar-ring: 218 96% 57%;
   }
 
   .dark {
@@ -133,12 +141,10 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.7;
+    line-height: 1.65;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -167,8 +173,28 @@
 
 @layer components {
   .container-academic {
-    @apply mx-auto px-4 sm:px-6 md:px-8 lg:px-12;
+    @apply mx-auto px-5 sm:px-6 md:px-8 lg:px-10;
     max-width: var(--container-max);
+  }
+
+  .section-reference {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .eyebrow-reference {
+    @apply text-xs font-bold uppercase tracking-[0.24em] text-okema-rust;
+  }
+
+  .btn-reference {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-okema-gold focus-visible:ring-offset-2;
+  }
+
+  .contact-row {
+    @apply flex items-center gap-3 text-base leading-7 transition hover:text-okema-rust;
+  }
+
+  .shadow-reference {
+    box-shadow: 0 18px 40px hsl(var(--okema-ink) / 0.08);
   }
 
   .section-academic {

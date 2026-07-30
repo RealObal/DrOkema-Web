@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { CalendarDays, Menu, X } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -24,39 +24,46 @@ export function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 shadow-sm backdrop-blur-md">
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00A3C1] to-transparent" />
+    <header className="sticky top-0 z-50 bg-okema-cream/95 backdrop-blur-md">
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-okema-line" />
       <nav className="container-academic" aria-label="Primary navigation">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A3C1] focus-visible:ring-offset-2">
+        <div className="flex min-h-24 flex-col items-center justify-center gap-4 py-4 lg:min-h-28">
+          <Link to="/" className="flex items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-medical-teal focus-visible:ring-offset-2">
             <img
               src="/favicon.png"
               alt="Dr. Okema Logo"
-              className="h-10 w-auto md:h-14 object-contain"
+              className="h-14 w-auto object-contain md:h-16"
               decoding="async"
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden items-center gap-1 lg:flex">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`rounded-md px-3 py-2 text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A3C1] focus-visible:ring-offset-2 ${
+                className={`px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-medical-teal focus-visible:ring-offset-2 ${
                   isActive(item.href)
-                    ? "bg-slate-100 text-[#1B2B48]"
-                    : "text-[#0E7490] hover:text-[#00A3C1]"
+                    ? "text-okema-rust"
+                    : "text-okema-ink hover:text-okema-rust"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
               >
                 {item.name}
               </Link>
             ))}
+            <Link
+              to="/contact"
+              className="ml-3 inline-flex items-center gap-2 bg-okema-ink px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:bg-okema-rust"
+            >
+              <CalendarDays className="h-4 w-4" aria-hidden="true" />
+              Appointment
+            </Link>
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden rounded-md p-2 text-[#1B2B48] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A3C1] focus-visible:ring-offset-2"
+            className="absolute right-4 top-8 rounded-md p-2 text-okema-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-medical-teal focus-visible:ring-offset-2 lg:hidden"
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
             aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -66,17 +73,17 @@ export function Navbar() {
         </div>
 
         {isOpen && (
-          <div id="mobile-navigation" className="lg:hidden py-4 border-t border-[#F1F5F9] bg-white animate-fade-in">
-            <div className="flex flex-col space-y-3">
+          <div id="mobile-navigation" className="animate-fade-in border-t border-okema-line bg-okema-cream py-4 lg:hidden">
+            <div className="flex flex-col space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`rounded-md px-3 py-3 text-base font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A3C1] focus-visible:ring-offset-2 ${
+                  className={`px-3 py-3 text-sm font-bold uppercase tracking-[0.14em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-medical-teal focus-visible:ring-offset-2 ${
                     isActive(item.href)
-                      ? "bg-slate-100 text-[#1B2B48]"
-                      : "text-[#0E7490] hover:text-[#00A3C1]"
+                      ? "text-okema-rust"
+                      : "text-okema-ink hover:text-okema-rust"
                   }`}
                   aria-current={isActive(item.href) ? "page" : undefined}
                 >

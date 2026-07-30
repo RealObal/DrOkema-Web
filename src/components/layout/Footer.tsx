@@ -1,81 +1,96 @@
 import { Link } from "react-router-dom";
-import { Mail, Linkedin, MapPin } from "lucide-react";
+import { Linkedin, Mail, MapPin, MessageSquare } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1B2B48] text-white relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00A3C1] to-transparent" />
-      <div className="container-academic py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          {/* Brand */}
+    <footer className="relative bg-okema-ink text-white">
+      <div className="absolute left-0 right-0 top-0 h-px bg-okema-gold/50" />
+      <div className="container-academic py-14 md:py-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.2fr_0.7fr_1fr] md:gap-12">
           <div>
             <img
               src="/favicon.png"
               alt="Dr. Okema Logo"
-              className="h-20 w-auto mb-4 object-contain"
+              className="mb-5 h-20 w-auto object-contain"
             />
-            <h3 className="text-lg font-serif font-semibold text-white mb-4">
+            <h3 className="mb-4 font-serif text-2xl font-semibold text-white">
               Dr. Okema James Nelson
             </h3>
-            <p className="text-sm text-[#F1F5F9] leading-relaxed">
+            <p className="max-w-sm text-sm leading-7 text-white/72">
               Medical Doctor, Clinical Researcher, and advocate for improved emergency
               and cardiovascular care in resource-limited settings.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Quick Links
+            <h4 className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-okema-gold">
+              Portfolio
             </h4>
-            <nav className="flex flex-col space-y-2">
-              <Link to="/research" className="text-sm text-[#F1F5F9] hover:text-[#00A3C1] transition-colors">
+            <nav className="flex flex-col space-y-3">
+              <Link to="/about" className="text-sm text-white/72 transition-colors hover:text-white">
+                About
+              </Link>
+              <Link to="/clinical" className="text-sm text-white/72 transition-colors hover:text-white">
+                Clinical
+              </Link>
+              <Link to="/research" className="text-sm text-white/72 transition-colors hover:text-white">
                 Research
               </Link>
-              <Link to="/contact" className="text-sm text-[#F1F5F9] hover:text-[#00A3C1] transition-colors">
+              <Link to="/projects" className="text-sm text-white/72 transition-colors hover:text-white">
+                Programs
+              </Link>
+              <Link to="/contact" className="text-sm text-white/72 transition-colors hover:text-white">
                 Contact
               </Link>
             </nav>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h4 className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-okema-gold">
               Contact
             </h4>
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-4">
               <a
                 href="mailto:ojamesnelson@gmail.com"
-                className="flex items-center space-x-2 text-sm text-[#F1F5F9] hover:text-white transition-colors"
+                className="flex items-center space-x-3 text-sm text-white/72 transition-colors hover:text-white"
               >
                 <Mail size={16} />
                 <span>ojamesnelson@gmail.com</span>
               </a>
               <a
+                href="https://wa.me/256776994589?text=Hello%20Dr%20Okema%2C%20I%20would%20like%20to%20get%20in%20touch."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 text-sm text-white/72 transition-colors hover:text-white"
+              >
+                <MessageSquare size={16} />
+                <span>+256 776 994 589</span>
+              </a>
+              <a
                 href="https://www.linkedin.com/in/dr-okema"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-sm text-[#F1F5F9] hover:text-white transition-colors"
+                className="flex items-center space-x-3 text-sm text-white/72 transition-colors hover:text-white"
               >
                 <Linkedin size={16} />
                 <span>LinkedIn Profile</span>
               </a>
-              <div className="flex items-center space-x-2 text-sm text-[#F1F5F9]">
-                   <MapPin size={16} />
-                <span>Kampala, Uganda</span>
+              <div className="flex items-center space-x-3 text-sm text-white/72">
+                <MapPin size={16} />
+                <span>Gulu, Northern Uganda</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="h-px bg-gradient-to-r from-transparent via-[#00A3C1] to-transparent my-8" />
+        <div className="my-8 h-px bg-white/12" />
 
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[#F1F5F9]">
+        <div className="flex flex-col items-center justify-between text-sm text-white/60 md:flex-row">
           <p>&copy; {currentYear} Dr. Okema James Nelson. All rights reserved.</p>
           <p className="mt-2 md:mt-0">
-            <a href="https://drokema.com" className="hover:text-white transition-colors">
+            <a href="https://drokema.com" className="transition-colors hover:text-white">
               drokema.com
             </a>
           </p>
